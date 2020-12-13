@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&i=446 -->
+<html dir="ltr" lang="en-gb" nighteye="active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>a {                        color:rgb(140,140,250);                        }                        *::-webkit-scrollbar-track-piece {                            background-color:rgba(255, 255, 255, 0.2) !important;                        }                        *::-webkit-scrollbar-track {                            background-color:rgba(255, 255, 255, 0.3) !important;                        }                        *::-webkit-scrollbar-thumb {                            background-color:rgba(255, 255, 255, 0.5) !important;                        }                        .pdfViewer,                        embed[type="application/pdf"] {                            filter:invert(90%);                        }</style><style id="nighteyedefaultcss">html {                            color:#bfbfbf;                            background-image:none !important;                            background:#1f1f1f !important;                        }                        body {                            background-color:#1f1f1f;                            background-image:none !important;                        }                        input, select, textarea, button {                            color:#bfbfbf;                            background-color:#1f1f1f;                        }                        font {                            color:#bfbfbf;                        }</style><style>html { filter: contrast(96%) brightness(100%) saturate(100%);}                        .NIGHTEYE_Filter {                            width:100%; height:100%;                            position:fixed;                            left:0; top:0;                            pointer-events:none;                            z-index:4000000000;                        }                        .NIGHTEYE_YellowFilter {                            background:rgba(255, 255, 0, 0.15);                            opacity:0;                        }                        .NIGHTEYE_BlueFilter {                            background:rgba(0, 0, 255, 0.15);                            opacity:0;                        }                        .NIGHTEYE_DimFilter {                            background:rgba(0, 0, 0, 0.5);                            opacity:0;                        }                        .NIGHTEYE_TransformZ {                            transform:translateZ(0);                        }</style>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ACP index</title>
+
+<link href="./ACP index_files/font-awesome.min.css" rel="stylesheet">
+<link href="./ACP index_files/admin.css" rel="stylesheet" type="text/css" media="screen">
+
+<script>
+// <![CDATA[
+var jump_page = 'Enter\u0020the\u0020page\u0020number\u0020you\u0020wish\u0020to\u0020go\u0020to:';
+var on_page = '';
+var per_page = '';
+var base_url = '';
+
+/**
+* Jump to page
+*/
+function jumpto()
+{
+	var page = prompt(jump_page, on_page);
+
+	if (page !== null && !isNaN(page) && page == Math.floor(page) && page > 0)
+	{
+		if (base_url.indexOf('?') == -1)
+		{
+			document.location.href = base_url + '?start=' + ((page - 1) * per_page);
+		}
+		else
+		{
+			document.location.href = base_url.replace(/&amp;/g, '&') + '&start=' + ((page - 1) * per_page);
+		}
+	}
+}
+
+/**
+* Mark/unmark checkboxes
+* id = ID of parent container, name = name prefix, state = state [true/false]
+*/
+function marklist(id, name, state)
+{
+	var parent = document.getElementById(id) || document[id];
+
+	if (!parent)
+	{
+		return;
+	}
+
+	var rb = parent.getElementsByTagName('input');
+
+	for (var r = 0; r < rb.length; r++)
+	{
+		if (rb[r].name.substr(0, name.length) == name && rb[r].disabled !== true)
+		{
+			rb[r].checked = state;
+		}
+	}
+}
+
+/**
+* Find a member
+*/
+function find_username(url)
+{
+	popup(url, 760, 570, '_usersearch');
+	return false;
+}
+
+/**
+* Window popup
+*/
+function popup(url, width, height, name)
+{
+	if (!name)
+	{
+		name = '_popup';
+	}
+
+	window.open(url.replace(/&amp;/g, '&'), name, 'height=' + height + ',resizable=yes,scrollbars=yes, width=' + width);
+	return false;
+}
+
+// ]]>
+</script>
+
+
+<link href="./ACP index_files/flightdeck.css" rel="stylesheet" media="screen">
+<link href="./ACP index_files/acp_tables.css" rel="stylesheet" media="screen">
+
+
+
+<link rel="stylesheet" href="chrome-extension://alncdjedloppbablonallfbkeiknmkdi/css/custom-styles.css"><link rel="stylesheet" href="chrome-extension://alncdjedloppbablonallfbkeiknmkdi/css/scroll.css"></head>
+
+<body class="ltr hasjs">
+
+
+<div id="wrap">
+	<div id="page-header">
+		<h1>Administration Control Panel</h1>
+		<p><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902">Admin index</a> • <a href="http://localhost/index.php?sid=fa02db77540e71789a6e0da132046902">Board index</a></p>
+		<p id="skip"><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=446#acp">Skip to content</a></p>
+	</div>
+
+	<div id="page-body">
+		<div id="tabs">
+			<ul>
+							<li class="tab activetab"><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=446">General</a></li>
+							<li class="tab"><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=451">Forums</a></li>
+							<li class="tab"><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=454">Posting</a></li>
+							<li class="tab"><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=457">Users and Groups</a></li>
+							<li class="tab"><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=461">Permissions</a></li>
+							<li class="tab"><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=466">Customise</a></li>
+							<li class="tab"><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=469">Maintenance</a></li>
+							<li class="tab"><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=472">System</a></li>
+							<li class="tab" style=""><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=476">Extensions</a></li>
+						<li class="tab responsive-tab dropdown-container" style="display: none;"><a href="javascript:void(0);" class="responsive-tab-link dropdown-toggle">&nbsp;</a><div class="dropdown tab-dropdown" style="display: none;"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"><li class=""><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=476">Extensions</a></li></ul></div></li></ul>
+		</div>
+
+		<div id="acp">
+				<div id="content">
+					<div id="menu">
+						<p>You are logged in as:<br><strong>Morabis</strong> [&nbsp;<a href="http://localhost/ucp.php?mode=logout&amp;sid=fa02db77540e71789a6e0da132046902">Logout</a>&nbsp;][&nbsp;<a href="http://localhost/adm/index.php?action=admlogout&amp;sid=fa02db77540e71789a6e0da132046902">ACP&nbsp;Logout</a>&nbsp;]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+																			
+													
+																																		<div class="menu-block active">
+								<a class="header" href="javascript:void(0);">Quick access</a>
+								<ul>
+														
+															<li><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=acp_users&amp;mode=overview"><span>Manage users</span></a></li>
+																							<li><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=acp_groups&amp;mode=manage"><span>Manage groups</span></a></li>
+																							<li><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=acp_forums&amp;mode=manage"><span>Manage forums</span></a></li>
+																							<li><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=acp_logs&amp;mode=mod"><span>Moderator log</span></a></li>
+																							<li><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=acp_bots&amp;mode=bots"><span>Spiders/Robots</span></a></li>
+																							<li><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=acp_php_info&amp;mode=info"><span>PHP information</span></a></li>
+																																			</ul></div>							<div class="menu-block">
+								<a class="header" href="javascript:void(0);">Board configuration</a>
+								<ul>
+														
+															<li><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=acp_attachments&amp;mode=attach"><span>Attachment settings</span></a></li>
+																							<li><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=acp_board&amp;mode=settings"><span>Board settings</span></a></li>
+																							<li><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=acp_board&amp;mode=features"><span>Board features</span></a></li>
+																							<li><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=acp_board&amp;mode=avatar"><span>Avatar settings</span></a></li>
+																							<li><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=acp_board&amp;mode=message"><span>Private message settings</span></a></li>
+																							<li><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=acp_board&amp;mode=post"><span>Post settings</span></a></li>
+																							<li><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=acp_board&amp;mode=signature"><span>Signature settings</span></a></li>
+																							<li><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=acp_board&amp;mode=feed"><span>Feed settings</span></a></li>
+																							<li><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=acp_board&amp;mode=registration"><span>User registration settings</span></a></li>
+																							<li><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=acp_captcha&amp;mode=visual"><span>Spambot countermeasures</span></a></li>
+																							<li><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=acp_contact&amp;mode=contact"><span>Contact page settings</span></a></li>
+																																			</ul></div>							<div class="menu-block">
+								<a class="header" href="javascript:void(0);">Client communication</a>
+								<ul>
+														
+															<li><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=acp_board&amp;mode=auth"><span>Authentication</span></a></li>
+																							<li><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=acp_board&amp;mode=email"><span>Email settings</span></a></li>
+																							<li><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=acp_jabber&amp;mode=settings"><span>Jabber settings</span></a></li>
+																																			</ul></div>							<div class="menu-block">
+								<a class="header" href="javascript:void(0);">Server configuration</a>
+								<ul>
+														
+															<li><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=acp_board&amp;mode=cookie"><span>Cookie settings</span></a></li>
+																							<li><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=acp_board&amp;mode=server"><span>Server settings</span></a></li>
+																							<li><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=acp_board&amp;mode=security"><span>Security settings</span></a></li>
+																							<li><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=acp_board&amp;mode=load"><span>Load settings</span></a></li>
+																							<li><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=acp_search&amp;mode=settings"><span>Search settings</span></a></li>
+																							<li><a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=acp_help_phpbb&amp;mode=help_phpbb"><span>Help support phpBB</span></a></li>
+																					
+																																																																																																																																			</ul>
+							</div>
+											</div>
+
+					<div id="main">
+						<div class="main">
+							
+<a id="maincontent"></a>
+
+
+	<h1>Welcome to phpBB</h1>
+
+	<p>Thank you for choosing phpBB as your board solution. This screen will give you a quick overview of all the various statistics of your board. The links on the left hand side of this screen allow you to control every aspect of your board experience. Each page will have instructions on how to use the tools.</p>
+
+		
+			<div class="errorbox">
+			<h3>Warning</h3>
+			<p>The selected search backend does not have a search index.<br>Please create the index for “phpBB Native Fulltext” in the <a href="http://localhost/adm/index.php?i=acp_search&amp;mode=index&amp;sid=fa02db77540e71789a6e0da132046902">search index</a> section.</p>
+		</div>
+	
+	
+			
+		
+		
+			
+			<div class="errorbox notice">
+			<p>Your config file (config.php) is currently world-writable. We strongly encourage you to change the permissions to 640 or at least to 644 (for example: <a href="http://en.wikipedia.org/wiki/Chmod" rel="external">chmod</a> 640 config.php).</p>
+		</div>
+	
+	
+	
+		<div class="lside">
+			<table class="table2 zebra-table no-header responsive show-header" data-no-responsive-header="true">
+				<thead>
+					<tr>
+						<th>Statistic</th>
+						<th>Value</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td class="tabled">Board started:</td>
+						<td class="tabled"><strong>01 Jan 2009, 01:00</strong></td>
+					</tr>
+					<tr>
+						<td class="tabled">Avatar directory size:</td>
+						<td class="tabled"><strong>0 Bytes</strong></td>
+					</tr>
+					<tr>
+						<td class="tabled">Database size:</td>
+						<td class="tabled"><strong>27.31 MiB</strong></td>
+					</tr>
+					<tr>
+						<td class="tabled">Size of posted attachments:</td>
+						<td class="tabled"><strong>1.76 MiB</strong></td>
+					</tr>
+					<tr>
+						<td class="tabled">Database server:</td>
+						<td class="tabled"><strong>MySQL(i) 10.4.16-MariaDB</strong></td>
+					</tr>
+					<tr>
+						<td class="tabled">GZip compression:</td>
+						<td class="tabled"><strong>On</strong></td>
+					</tr>
+					<tr>
+						<td class="tabled">PHP version:</td>
+						<td class="tabled"><strong>7.4.12</strong></td>
+					</tr>
+					<tr>
+											<td class="tabled">Orphan attachments:</td>
+						<td class="tabled">
+													<strong>0</strong>
+												</td>
+											</tr>
+										<tr>
+						<td class="tabled">Board version:</td>
+						<td class="tabled">
+							<strong><a href="http://localhost/adm/index.php?i=update&amp;mode=version_check&amp;sid=fa02db77540e71789a6e0da132046902" style="color: rgb(153, 230, 153);" title="More information »" ne="0.012393622739288679">3.3.2</a></strong> [&nbsp;<a href="http://localhost/adm/index.php?versioncheck_force=1&amp;sid=fa02db77540e71789a6e0da132046902">Re-Check version</a>&nbsp;]
+						</td>
+					</tr>
+									</tbody>
+			</table>
+
+			<table class="table2 zebra-table no-header responsive show-header" data-no-responsive-header="true">
+				<thead>
+					<tr>
+						<th>Statistic</th>
+						<th>Value</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td class="tabled">Number of posts:</td>
+						<td class="tabled"><strong>347100</strong></td>
+					</tr>
+					<tr>
+						<td class="tabled">Posts per day:</td>
+						<td class="tabled"><strong>79.52</strong></td>
+					</tr>
+					<tr>
+						<td class="tabled">Number of topics:</td>
+						<td class="tabled"><strong>15214</strong></td>
+					</tr>
+					<tr>
+						<td class="tabled">Topics per day:</td>
+						<td class="tabled"><strong>3.49</strong></td>
+					</tr>
+					<tr>
+						<td class="tabled">Number of users:</td>
+						<td class="tabled"><strong>1140</strong></td>
+					</tr>
+					<tr>
+						<td class="tabled">Users per day:</td>
+						<td class="tabled"><strong>0.26</strong></td>
+					</tr>
+					<tr>
+						<td class="tabled">Number of attachments:</td>
+						<td class="tabled"><strong>13</strong></td>
+					</tr>
+					<tr>
+						<td class="tabled">Attachments per day:</td>
+						<td class="tabled"><strong>0.00</strong></td>
+					</tr>
+					<tr>
+						<td class="tabled">&nbsp;</td>
+						<td class="tabled">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+			<fieldset>
+			<legend>Resynchronise or reset statistics</legend>
+
+			<form id="action_online_form" method="post" action="http://localhost/adm/index.php?i=acp_main&amp;sid=fa02db77540e71789a6e0da132046902&amp;mode=main" data-ajax="true">
+				<dl>
+					<dt><label for="action_online">Reset most users ever online</label><br><span class="responsive-hide">&nbsp;</span></dt>
+					<dd><input type="hidden" name="action" value="online"><input class="button2" type="submit" id="action_online" name="action_online" value="Run now"></dd>
+				</dl>
+			</form>
+
+			<form id="action_date_form" method="post" action="http://localhost/adm/index.php?i=acp_main&amp;sid=fa02db77540e71789a6e0da132046902&amp;mode=main" data-ajax="true">
+				<dl>
+					<dt><label for="action_date">Reset board’s start date</label><br><span class="responsive-hide">&nbsp;</span></dt>
+					<dd><input type="hidden" name="action" value="date"><input class="button2" type="submit" id="action_date" name="action_date" value="Run now"></dd>
+				</dl>
+			</form>
+
+			<form id="action_stats_form" method="post" action="http://localhost/adm/index.php?i=acp_main&amp;sid=fa02db77540e71789a6e0da132046902&amp;mode=main">
+				<dl>
+					<dt><label for="action_stats">Resynchronise statistics</label><br><span>Recalculates the total number of posts, topics, users and files.</span></dt>
+					<dd><input type="hidden" name="action" value="stats"><input class="button2" type="submit" id="action_stats" name="action_stats" value="Run now"></dd>
+				</dl>
+			</form>
+
+			<form id="action_user_form" method="post" action="http://localhost/adm/index.php?i=acp_main&amp;sid=fa02db77540e71789a6e0da132046902&amp;mode=main">
+				<dl>
+					<dt><label for="action_user">Resynchronise post counts</label><br><span>Only existing posts will be taken into consideration. Pruned posts will not be counted.</span></dt>
+					<dd><input type="hidden" name="action" value="user"><input class="button2" type="submit" id="action_user" name="action_user" value="Run now"></dd>
+				</dl>
+			</form>
+
+			<form id="action_db_track_form" method="post" action="http://localhost/adm/index.php?i=acp_main&amp;sid=fa02db77540e71789a6e0da132046902&amp;mode=main">
+				<dl>
+					<dt><label for="action_db_track">Resynchronise dotted topics</label><br><span>First unmarks all topics and then correctly marks topics that have seen any activity during the past six months.</span></dt>
+					<dd><input type="hidden" name="action" value="db_track"><input class="button2" type="submit" id="action_db_track" name="action_db_track" value="Run now"></dd>
+				</dl>
+			</form>
+
+			
+			<form id="action_purge_cache_form" method="post" action="http://localhost/adm/index.php?i=acp_main&amp;sid=fa02db77540e71789a6e0da132046902&amp;mode=main" data-ajax="true">
+				<dl>
+					<dt><label for="action_purge_cache">Purge the cache</label><br><span>Purge all cache related items, this includes any cached template files or queries.</span></dt>
+					<dd><input type="hidden" name="action" value="purge_cache"><input class="button2" type="submit" id="action_purge_cache" name="action_purge_cache" value="Run now"></dd>
+				</dl>
+			</form>
+
+			  		</fieldset>
+	
+			<h2>Logged administrator actions</h2>
+
+		<p>This gives an overview of the last five actions carried out by board administrators. A full copy of the log can be viewed from the appropriate menu item or following the link below.</p>
+
+		<div style="text-align: right;"><a href="http://localhost/adm/index.php?i=logs&amp;mode=admin&amp;sid=fa02db77540e71789a6e0da132046902">» View administrator log</a></div>
+
+		<table class="table1 zebra-table responsive">
+		<thead>
+		<tr>
+			<th>Username</th>
+			<th>User IP</th>
+			<th>Time</th>
+			<th>Action</th>
+		</tr>
+		</thead>
+		<tbody>
+					<tr>
+				<td><dfn style="display: none;">Username</dfn><a href="http://localhost/adm/index.php?i=users&amp;mode=overview&amp;sid=fa02db77540e71789a6e0da132046902&amp;u=242" style="color: rgb(153, 230, 184);" class="username-coloured" ne="0.07690654133214037">Morabis</a></td>
+				<td style="text-align: center;"><dfn style="display: none;">User IP</dfn>::1</td>
+				<td style="text-align: center;"><dfn style="display: none;">Time</dfn>13 Dec 2020, 18:35</td>
+				<td><dfn style="display: none;">Action</dfn><strong>Edited BBCode</strong><br>» page</td>
+			</tr>
+					<tr>
+				<td><dfn style="display: none;">Username</dfn><a href="http://localhost/adm/index.php?i=users&amp;mode=overview&amp;sid=fa02db77540e71789a6e0da132046902&amp;u=242" style="color: rgb(153, 230, 184);" class="username-coloured" ne="0.5264914735820605">Morabis</a></td>
+				<td style="text-align: center;"><dfn style="display: none;">User IP</dfn>::1</td>
+				<td style="text-align: center;"><dfn style="display: none;">Time</dfn>13 Dec 2020, 18:33</td>
+				<td><dfn style="display: none;">Action</dfn><strong>Edited BBCode</strong><br>» page</td>
+			</tr>
+					<tr>
+				<td><dfn style="display: none;">Username</dfn><a href="http://localhost/adm/index.php?i=users&amp;mode=overview&amp;sid=fa02db77540e71789a6e0da132046902&amp;u=242" style="color: rgb(153, 230, 184);" class="username-coloured" ne="0.10868293729969758">Morabis</a></td>
+				<td style="text-align: center;"><dfn style="display: none;">User IP</dfn>::1</td>
+				<td style="text-align: center;"><dfn style="display: none;">Time</dfn>13 Dec 2020, 18:24</td>
+				<td><dfn style="display: none;">Action</dfn><strong>Edited BBCode</strong><br>» page</td>
+			</tr>
+					<tr>
+				<td><dfn style="display: none;">Username</dfn><a href="http://localhost/adm/index.php?i=users&amp;mode=overview&amp;sid=fa02db77540e71789a6e0da132046902&amp;u=242" style="color: rgb(153, 230, 184);" class="username-coloured" ne="0.0275865318638433">Morabis</a></td>
+				<td style="text-align: center;"><dfn style="display: none;">User IP</dfn>::1</td>
+				<td style="text-align: center;"><dfn style="display: none;">Time</dfn>13 Dec 2020, 18:19</td>
+				<td><dfn style="display: none;">Action</dfn><strong>Edited BBCode</strong><br>» page</td>
+			</tr>
+					<tr>
+				<td><dfn style="display: none;">Username</dfn><a href="http://localhost/adm/index.php?i=users&amp;mode=overview&amp;sid=fa02db77540e71789a6e0da132046902&amp;u=242" style="color: rgb(153, 230, 184);" class="username-coloured" ne="0.17871704004417754">Morabis</a></td>
+				<td style="text-align: center;"><dfn style="display: none;">User IP</dfn>::1</td>
+				<td style="text-align: center;"><dfn style="display: none;">Time</dfn>13 Dec 2020, 17:05</td>
+				<td><dfn style="display: none;">Action</dfn><strong>Edited BBCode</strong><br>» page</td>
+			</tr>
+				</tbody>
+		</table>
+	
+			<h2>Inactive users</h2>
+
+		<p>This is a list of the last 10 registered users who have inactive accounts. Accounts are inactive either because account activation was enabled in user registration settings and these users’ accounts have not yet been activated, or because these accounts have been deactivated. A full list is available by following the link below from where you can activate, delete or remind (by sending an email) these users if you wish.</p>
+
+		<div style="text-align: right;"><a href="http://localhost/adm/index.php?i=inactive&amp;mode=list&amp;sid=fa02db77540e71789a6e0da132046902">» View inactive users</a></div>
+
+		<table class="table1 zebra-table responsive">
+		<thead>
+		<tr>
+			<th>Username</th>
+			<th>Joined</th>
+			<th>Inactive date</th>
+			<th>Last visit</th>
+			<th>Reason</th>
+		</tr>
+		</thead>
+		<tbody>
+					<tr class="big-column">
+				<td colspan="5" style="text-align: center;">No inactive users</td>
+			</tr>
+				</tbody>
+		</table>
+	
+
+						</div>
+					</div><!-- /#main -->
+				</div>
+		</div><!-- /#acp -->
+	</div>
+
+	<div id="page-footer">
+		<div class="copyright">
+							Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited
+							
+					</div>
+
+		<div id="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+			<div id="darken">&nbsp;</div>
+		</div>
+		<div id="loading_indicator"></div>
+
+		<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+			<a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=446#" class="alert_close"></a>
+			<h3 class="alert_title"></h3><p class="alert_text"></p>
+		</div>
+		<div id="phpbb_confirm" class="phpbb_alert">
+			<a href="http://localhost/adm/index.php?sid=fa02db77540e71789a6e0da132046902&amp;i=446#" class="alert_close"></a>
+			<div class="alert_text"></div>
+		</div>
+	</div>
+</div>
+
+<script src="./ACP index_files/jquery-3.5.1.min.js.download"></script>
+<script src="./ACP index_files/core.js.download"></script>
+
+
+<script>
+    $("input#colour_picker").addClass("jscolor {width:243, height:150}");
+</script>
+<script src="./ACP index_files/ajax.js.download"></script>
+<script src="./ACP index_files/admin.js.download"></script>
+<script src="./ACP index_files/jscolor.js.download"></script>
+
+
+
+
+</body></html>
